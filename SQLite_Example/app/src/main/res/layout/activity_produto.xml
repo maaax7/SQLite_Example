@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.rm73950.persistencia.ProdutoActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:editable="false"
+        android:enabled="true"
+        android:hint="ID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNomeProduto"
+        android:hint="Nome do Produto"
+        android:layout_below="@+id/txtID"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtPreco"
+        android:hint="Preço"
+        android:layout_below="@+id/txtNomeProduto"
+        android:layout_alignStart="@+id/txtNomeProduto" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescricao"
+        android:hint="Descricao do Produto"
+        android:layout_below="@+id/txtPreco"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gravar"
+        android:id="@+id/btnGravar"
+        android:layout_below="@+id/txtDescricao"
+        android:layout_alignStart="@+id/txtPreco" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo"
+        android:id="@+id/btnNovo"
+        android:layout_alignBottom="@+id/btnGravar"
+        android:layout_toEndOf="@+id/btnGravar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:id="@+id/btnExcluir"
+        android:layout_alignBottom="@+id/btnNovo"
+        android:layout_toEndOf="@+id/btnNovo" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listProdutos"
+        android:layout_below="@+id/btnGravar"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
